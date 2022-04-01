@@ -4,6 +4,7 @@ Exercises writen in ruby language
 ## Exercises
 - Roman Numerals
 - Blanked Patterns
+- Guessing Game
 
 ### Roman Numerals
 - This exercise returns the result of a number into a roman numeral
@@ -14,3 +15,8 @@ Exercises writen in ruby language
 - This exercise outputs a string in 20 rows to display a pattern
 - Each row will have the first letter shifted to the end of the string
 - Ex: "RRGGYYKK" will return "RGGYYKKR" in the first row
+
+### Guessing Game
+- This exercise generates a random number between 1-10 and waits for the user to guess it 
+- The user can try to guess at least 3 times
+- After submitting input, the user receives feedback if it was right or wrong
