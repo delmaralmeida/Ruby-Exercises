@@ -5,7 +5,7 @@ Exercises writen in ruby language
 - Roman Numerals
 - Blanked Patterns
 - Guessing Game
-- Ruby Blanks
+- Mad Libs
 
 ### Roman Numerals
 - This exercise returns the result of a number into a roman numeral
