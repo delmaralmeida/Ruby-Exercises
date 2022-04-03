@@ -5,6 +5,7 @@ Exercises writen in ruby language
 - Roman Numerals
 - Blanked Patterns
 - Guessing Game
+- Mad Libs
 
 ### Roman Numerals
 - This exercise returns the result of a number into a roman numeral
@@ -20,3 +21,7 @@ Exercises writen in ruby language
 - This exercise generates a random number between 1-10 and waits for the user to guess it 
 - The user can try to guess at least 3 times
 - After submitting input, the user receives feedback if it was right or wrong
+
+### Mad Libs
+- This exercise promps the user to provide 4 words to return a built sentence
+- Ex: given words [Buy, Cousin, Sweet, Cake] will return "I decided to Buy my Cousin with a Sweet Cake
