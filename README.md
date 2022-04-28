@@ -6,6 +6,7 @@ Exercises writen in ruby language
 - Blanked Patterns
 - Guessing Game
 - Mad Libs
+- Pig Latin
 
 ### Roman Numerals
 - This exercise returns the result of a number into a roman numeral
@@ -25,3 +26,6 @@ Exercises writen in ruby language
 ### Mad Libs
 - This exercise promps the user to provide 4 words to return a built sentence
 - Ex: given words [Buy, Cousin, Sweet, Cake] will return "I decided to Buy my Cousin with a Sweet Cake
+
+### Pig Latin
+- Ruby script which converts a single word into pig latin
