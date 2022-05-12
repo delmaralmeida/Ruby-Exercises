@@ -21,7 +21,7 @@ def pig_latin(word)
   "#{main.join}#{front.join}ay".capitalize
 end
 
-def convert_to_pig_latin(sentence = '')
+def sentence_to_pig_latin(sentence = '')
   words = sentence.split(' ')
   converted_words = words.map do |word|
     pig_latin(word)
@@ -30,7 +30,32 @@ def convert_to_pig_latin(sentence = '')
   converted_words.join(' ').capitalize
 end
 
-puts 'Give me a sentence to convert into Pig Latin'
-response = gets.chomp
+def give_word_spacement(word)
+  spaces = ''
 
-puts "\n#{convert_to_pig_latin(response)}"
+  word.size.times { spaces += ' ' }
+
+  spaces
+end
+
+def display_intro
+  puts "\n>> Pig Latin Translator <<\n\n"
+  puts 'Type a sentence to translate to pig latin.'
+  puts 'Type "quit" to exit the program.'
+end
+
+def pig_latin_translator
+  label = 'translate: '
+  spaces = give_word_spacement(label)
+
+  display_intro
+  loop do
+    print label
+    input = gets.chomp
+
+    exit if input.downcase == 'quit'
+    puts "\n#{spaces}#{sentence_to_pig_latin(input)}\n\n"
+  end
+end
+
+pig_latin_translator
