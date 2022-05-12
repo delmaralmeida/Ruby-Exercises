@@ -28,4 +28,6 @@ Exercises writen in ruby language
 - Ex: given words [Buy, Cousin, Sweet, Cake] will return "I decided to Buy my Cousin with a Sweet Cake
 
 ### Pig Latin
-- Ruby script which converts a single word into pig latin
+- Ruby script which converts words into pig latin
+- The script accepts a single word or a sentence
+- Ex: given sentence "I love pig latin", it will return "Iay ovelay igpay atinlay"
