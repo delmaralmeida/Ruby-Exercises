@@ -1,4 +1,5 @@
-# Ruby Essential Training Part 1: The Basics
+# **[Ruby Essential Training Part 1: The Basics](https://www.linkedin.com/learning/ruby-essential-training-part-1-the-basics-15650551?u=2166156)**
+
 Exercises writen in ruby language by following [Kevin Skoglund's](https://www.linkedin.com/learning/instructors/kevin-skoglund) ruby essential training courses.
 
 ## Roman Numerals
@@ -6,7 +7,6 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - This exercise returns the result of a number into a roman numeral
 - Ex: 1999 to MCMXCIX and 2022 to MMXXII
 - Number can be properly converted up to number 3999
-**Course:** [Ruby Essential Training Part 1: The Basics](https://www.linkedin.com/learning/ruby-essential-training-part-1-the-basics-15650551)
 
 ## Blanket Patterns
 **File:** `blanket_patterns.rb`
