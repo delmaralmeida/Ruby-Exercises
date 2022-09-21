@@ -9,3 +9,9 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - Ex: typing "d6 d8" will roll two dice, 1d6 and 1d8
 - When typing a non-existing dice set the program alerts the user
 - The dice set is based on dice from TTRPG games
+
+## Birthdate Analysis
+**File:** `birthdate_analysis.rb`
+- This exercise returns information regarding a given brithdate
+- The program asks for an input of year, month and day to output some information
+- For the month input, a user can use a number or text. Ex: 01, 1, January.
