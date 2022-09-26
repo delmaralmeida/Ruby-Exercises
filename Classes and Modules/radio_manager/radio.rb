@@ -3,14 +3,14 @@
 
 # Manages radio creation and actions
 class Radio
-  attr_reader :volume
-  attr_reader :freq
-  attr_reader :band
+  attr_reader :volume, :freq, :band
 
-  @@fm_frequencies  = 88.0...108.0 
-  @@default_fm_freq = 95.5
-  @@am_frequencies  = 540.0...1600.0
-  @@default_am_freq = 1010.0
+  FM_FREQUENCIES  = (88.0...108.0).freeze
+  DEFAULT_FM_FREQ = 95.5
+  AM_FREQUENCIES  = (540.0...1600.0).freeze
+  DEFAULT_AM_FREQ = 1010.0
+  VOLUME_VALUES   = (1...10).freeze
+  DEFAULT_VOLUME  = 5
 
   def self.am
     Radio.new(band: 'AM')
@@ -20,14 +20,15 @@ class Radio
     Radio.new(band: 'FM')
   end
 
-  def initialize(options={})
-    self.volume = options[:value] || 5
+  def initialize(options = {})
+    self.volume = options[:value] || DEFAULT_VOLUME
     @band = options[:band] || 'FM'
     @freq = default_freq
   end
 
   def volume=(value)
-    return if value < 1 || value > 10
+    return if value < VOLUME_VALUES.first || value > VOLUME_VALUES.last
+
     @volume = value
   end
 
@@ -39,7 +40,7 @@ class Radio
 
   def crank_it_up
     @volume = 15
-  end 
+  end
 
   def status
     "Station: #{freq} #{band}, volume: #{volume}"
@@ -48,10 +49,10 @@ class Radio
   private
 
   def default_freq
-    @band == 'AM' ? @@default_am_freq : @@default_fm_freq
+    @band == 'AM' ? DEFAULT_AM_FREQ : DEFAULT_FM_FREQ
   end
 
   def allowed_frequencies
-    @band == 'AM' ? @@am_frequencies : @@fm_frequencies
+    @band == 'AM' ? AM_FREQUENCIES : FM_FREQUENCIES
   end
 end
