@@ -10,6 +10,12 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - When typing a non-existing dice set the program alerts the user
 - The dice set is based on dice from TTRPG games
 
+## Radio Manager
+**File:** `radio_manager.rb`
+- This exercise focus on working with class and instance methods
+- This class is used to create radios, managing its volume and frequency
+- When running the program, it will simply call the initializer and then some methods to change its volume and frequency values
+
 ## Birthdate Analysis
 **File:** `birthdate_analysis.rb`
 - This exercise returns information regarding a given brithdate
