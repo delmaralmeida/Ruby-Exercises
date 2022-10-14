@@ -28,3 +28,8 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - A new class, ShiftCipher, manages how to encode and decode a string
 - And another one, SecureRadio, inherits from Radio and 'plays' an encoded version of audio_stream
 - Running this program will display 3 encoded strings from AUDIO_SAMPLES
+
+## Custom exception
+**File:** `custom_exception.rb`
+- A simple exercise to try out a custom exception with the Radio class from radio_manager
+- The program creates a new radio and then changes it's volume 3 times, showing 2 errors related with the new exception created for the Radio class

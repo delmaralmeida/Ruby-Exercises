@@ -1,6 +1,8 @@
 # !/usr/local/bin/ruby
 # frozen_string_literal: true
 
+require_relative 'volume_error'
+
 # Manages radio creation and actions
 class Radio
   attr_reader :volume, :freq, :band
@@ -35,9 +37,9 @@ class Radio
   end
 
   def volume=(value)
-    return if value < VOLUME_VALUES.first || value > VOLUME_VALUES.last
-
     @volume = value
+
+    validate_volume
   end
 
   def freq=(value)
@@ -66,6 +68,14 @@ class Radio
 
   def allowed_frequencies
     @band == 'AM' ? AM_FREQUENCIES : FM_FREQUENCIES
+  end
+
+  def validate_volume
+    volume_too_low  = volume < VOLUME_VALUES.first
+    volume_too_loud = volume > VOLUME_VALUES.last
+
+    raise VolumeError.new(volume, "to low") if volume_too_low
+    raise VolumeError.new(volume, "to loud") if volume_too_loud
   end
 
   def audio_stream
