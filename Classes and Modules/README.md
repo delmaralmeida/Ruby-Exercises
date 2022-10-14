@@ -21,3 +21,10 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - This exercise returns information regarding a given brithdate
 - The program asks for an input of year, month and day to output some information
 - For the month input, a user can use a number or text. Ex: 01, 1, January.
+
+## Secure Radio
+**File:** `secure_radio.rb`
+- This exercise simulates an encoded audio stream by encoding a string sample
+- A new class, ShiftCipher, manages how to encode and decode a string
+- And another one, SecureRadio, inherits from Radio and 'plays' an encoded version of audio_stream
+- Running this program will display 3 encoded strings from AUDIO_SAMPLES
