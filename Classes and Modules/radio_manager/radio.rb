@@ -11,6 +11,14 @@ class Radio
   DEFAULT_AM_FREQ = 1010.0
   VOLUME_VALUES   = (1...10).freeze
   DEFAULT_VOLUME  = 5
+  AUDIO_SAMPLES   = [
+    'Here Comes the Sun',
+    "Like a Rollin' Stone",
+    'I Heard It Through the Grapevine',
+    'Stairway to Heaven',
+    'a traffic report',
+    'a news report'
+  ].freeze
 
   def self.am
     Radio.new(band: 'AM')
@@ -46,7 +54,11 @@ class Radio
     "Station: #{freq} #{band}, volume: #{volume}"
   end
 
-  private
+  def play
+    puts "The radio plays: #{audio_stream}"
+  end
+
+  protected
 
   def default_freq
     @band == 'AM' ? DEFAULT_AM_FREQ : DEFAULT_FM_FREQ
@@ -54,5 +66,9 @@ class Radio
 
   def allowed_frequencies
     @band == 'AM' ? AM_FREQUENCIES : FM_FREQUENCIES
+  end
+
+  def audio_stream
+    AUDIO_SAMPLES.sample
   end
 end

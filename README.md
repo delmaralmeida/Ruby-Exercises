@@ -13,3 +13,4 @@ Exercises writen in ruby language by following [Kevin Skoglund's](https://www.li
 - Dice Roller
 - Radio Manager 
 - Birthdate Analysis
+- Secure Radio
